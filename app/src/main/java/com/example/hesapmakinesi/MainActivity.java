@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     Button button0, button1, button2, button3, button4, button5, button6,
             button7, button8, button9, buttonAdd, buttonSub, buttonDivision,
             buttonMul, button10, buttonC, buttonEqual;
-    EditText TopText, result;
+    EditText BotText, result;
     float mValueOne, mValueTwo;
     boolean Addition, Subtract, Multiplication, Division;
 
@@ -38,17 +38,17 @@ public class MainActivity extends AppCompatActivity {
         buttonDivision = (Button) findViewById(R.id.buttondiv);
         buttonC = (Button) findViewById(R.id.buttonC);
         buttonEqual = (Button) findViewById(R.id.buttoneql);
-        TopText = (EditText) findViewById(R.id.edt1);
+        BotText = (EditText) findViewById(R.id.edt1);
         result = (EditText) findViewById(R.id.edt2);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(result.getText().toString().contains("=")){
-                    TopText.setText("");
+                    BotText.setText("");
                     result.setText("");
                 }
-                TopText.setText(TopText.getText() + "1");
+                BotText.setText(BotText.getText() + "1");
                 result.setText(result.getText() + "1");
             }
         });
@@ -56,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(result.getText().toString().contains("=")){
-                    TopText.setText("");
+                    BotText.setText("");
                     result.setText("");
                 }
-                TopText.setText(TopText.getText() + "2");
+                BotText.setText(BotText.getText() + "2");
                 result.setText(result.getText() + "2");
             }
         });
@@ -67,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(result.getText().toString().contains("=")){
-                    TopText.setText("");
+                    BotText.setText("");
                     result.setText("");
                 }
-                TopText.setText(TopText.getText() + "3");
+                BotText.setText(BotText.getText() + "3");
                 result.setText(result.getText() + "3");
             }
         });
@@ -78,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(result.getText().toString().contains("=")){
-                    TopText.setText("");
+                    BotText.setText("");
                     result.setText("");
                 }
-                TopText.setText(TopText.getText() + "4");
+                BotText.setText(BotText.getText() + "4");
                 result.setText(result.getText() + "4");
             }
         });
@@ -89,10 +89,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(result.getText().toString().contains("=")){
-                    TopText.setText("");
+                    BotText.setText("");
                     result.setText("");
                 }
-                TopText.setText(TopText.getText() + "5");
+                BotText.setText(BotText.getText() + "5");
                 result.setText(result.getText() + "5");
             }
         });
@@ -100,10 +100,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(result.getText().toString().contains("=")){
-                    TopText.setText("");
+                    BotText.setText("");
                     result.setText("");
                 }
-                TopText.setText(TopText.getText() + "6");
+                BotText.setText(BotText.getText() + "6");
                 result.setText(result.getText() + "6");
             }
         });
@@ -111,10 +111,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(result.getText().toString().contains("=")){
-                    TopText.setText("");
+                    BotText.setText("");
                     result.setText("");
                 }
-                TopText.setText(TopText.getText() + "7");
+                BotText.setText(BotText.getText() + "7");
                 result.setText(result.getText() + "7");
             }
         });
@@ -122,10 +122,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(result.getText().toString().contains("=")){
-                    TopText.setText("");
+                    BotText.setText("");
                     result.setText("");
                 }
-                TopText.setText(TopText.getText() + "8");
+                BotText.setText(BotText.getText() + "8");
                 result.setText(result.getText() + "8");
             }
         });
@@ -133,31 +133,31 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(result.getText().toString().contains("=")){
-                    TopText.setText("");
+                    BotText.setText("");
                     result.setText("");
                 }
-                TopText.setText(TopText.getText() + "9");
+                BotText.setText(BotText.getText() + "9");
                 result.setText(result.getText() + "9");
             }
         });
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TopText.setText("");
+                BotText.setText("");
                 result.setText("");
-                TopText.setText(TopText.getText() + "0");
+                BotText.setText(BotText.getText() + "0");
                 result.setText(result.getText() + "0");
             }
         });
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (TopText == null) {
-                    TopText.setText("");
+                if (BotText == null) {
+                    BotText.setText("");
                 } else {
-                    mValueOne = Float.parseFloat(TopText.getText() + "");
+                    mValueOne = Float.parseFloat(BotText.getText() + "");
                     Addition = true;
-                    TopText.setText(null);
+                    BotText.setText(null);
                     result.setText(result.getText() + "+");
                 }
             }
@@ -165,50 +165,50 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(TopText.getText() + "");
+                mValueOne = Float.parseFloat(BotText.getText() + "");
                 Subtract = true;
-                TopText.setText(null);
+                BotText.setText(null);
                 result.setText(result.getText() + "-");
             }
         });
         buttonMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(TopText.getText() + "");
+                mValueOne = Float.parseFloat(BotText.getText() + "");
                 Multiplication = true;
-                TopText.setText(null);
+                BotText.setText(null);
                 result.setText(result.getText() + "*");
             }
         });
         buttonDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(TopText.getText() + "");
+                mValueOne = Float.parseFloat(BotText.getText() + "");
                 Division = true;
-                TopText.setText(null);
+                BotText.setText(null);
                 result.setText(result.getText() + "/");
             }
         });
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mValueTwo = Float.parseFloat(TopText.getText() + "");
+                mValueTwo = Float.parseFloat(BotText.getText() + "");
                 result.setText(result.getText() + "=");
 
                 if (Addition == true) {
-                    TopText.setText(mValueOne + mValueTwo + "");
+                    BotText.setText(mValueOne + mValueTwo + "");
                     Addition = false;
                 }
                 if (Subtract == true) {
-                    TopText.setText(mValueOne - mValueTwo + "");
+                    BotText.setText(mValueOne - mValueTwo + "");
                     Subtract = false;
                 }
                 if (Multiplication == true) {
-                    TopText.setText(mValueOne * mValueTwo + "");
+                    BotText.setText(mValueOne * mValueTwo + "");
                     Multiplication = false;
                 }
                 if (Division == true) {
-                    TopText.setText(mValueOne / mValueTwo + "");
+                    BotText.setText(mValueOne / mValueTwo + "");
                     Division = false;
                 }
             }
@@ -216,14 +216,14 @@ public class MainActivity extends AppCompatActivity {
         buttonC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TopText.setText("");
+                BotText.setText("");
                 result.setText("");
             }
         });
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TopText.setText(TopText.getText() + ".");
+                BotText.setText(BotText.getText() + ".");
                 result.setText(result.getText() + ".");
             }
         });
